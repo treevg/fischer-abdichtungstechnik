@@ -70,26 +70,33 @@ python3 verify_site.py
 
 ---
 
-#### 📈 5. Google Ads (AdWords) Conversion-Tracking konfigurieren
+#### 📈 5. Google Analytics 4 (GA4) & Google Ads konfigurieren
 
-Die Seite ist für Google Ads optimiert und erfasst erfolgreiche Kontaktanfragen als Conversions. Vor dem Live-Gang müssen folgende IDs in **`index.html`** ersetzt werden:
+Die Seite ist für Tracking-Dienste optimiert und erfasst erfolgreiche Kontaktanfragen als Conversions (Google Ads) und standardisierte Leads (GA4). Vor dem Live-Gang müssen folgende Platzhalter in **`index.html`** ersetzt werden:
 
-1. **Globaler Website-Tag (`<head>`-Bereich):**
-   Suche nach `AW-XXXXXXXXX` und ersetze es an zwei Stellen durch deine echte Google Ads Conversion-ID:
+1. **Einheitlicher Google-Tag (`<head>`-Bereich):**
+   - Suche nach `G-XXXXXXXXXX` und ersetze es an zwei Stellen durch deine **GA4 Mess-ID** (z. B. `G-1A2B3C4D5E`).
+   - Suche nach `AW-XXXXXXXXX` und ersetze es durch deine **Google Ads Conversion-ID** (z. B. `AW-987654321`).
    ```html
-   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-DEINE_ID"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEINE_GA4_MESS_ID"></script>
    <script>
        ...
-       gtag('config', 'AW-DEINE_ID');
+       // GA4 Initialisierung
+       gtag('config', 'G-DEINE_GA4_MESS_ID');
+
+       // Google Ads Initialisierung
+       gtag('config', 'AW-DEINE_ADS_ID');
    </script>
    ```
-2. **Conversion Event (`handleFormSubmit`-Funktion):**
-   Suche im `<script>`-Bereich nach `AW-XXXXXXXXX/YYYYYYYYYYYYYYYY` und ersetze es mit deiner Conversion-ID und dem dazugehörigen Label:
+2. **Google Ads Conversion Event (`handleFormSubmit`-Funktion):**
+   Suche im `<script>`-Bereich nach `AW-XXXXXXXXX/YYYYYYYYYYYYYYYY` und ersetze es mit deiner Google Ads ID und dem dazugehörigen Label (z. B. `AW-987654321/AbCDeF_GhIjKlMnOpQr`):
    ```javascript
    gtag('event', 'conversion', {
-       'send_to': 'AW-DEINE_ID/DEIN_CONVERSION_LABEL'
+       'send_to': 'AW-DEINE_ADS_ID/DEIN_CONVERSION_LABEL'
    });
    ```
+3. **Google Analytics 4 Lead Event (`handleFormSubmit`-Funktion):**
+   Das Standard-Event `generate_lead` wird automatisch an Google Analytics gesendet und kann dort direkt als Conversion markiert werden. Keine manuelle Anpassung erforderlich!
 
 ---
 
