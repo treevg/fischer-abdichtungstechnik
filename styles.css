@@ -255,6 +255,30 @@ p {
     gap: 0.75rem;
 }
 
+.header-logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.header-logo-img:hover {
+    transform: scale(1.02);
+}
+
+.footer-logo-img {
+    height: 52px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* Inverts dark grey to solid clean white for high contrast */
+    transition: var(--transition);
+    opacity: 0.85;
+}
+
+.footer-logo-img:hover {
+    opacity: 1;
+}
+
 .logo-text {
     display: flex;
     flex-direction: column;
@@ -1174,6 +1198,73 @@ p {
     .lightbox-content {
         max-width: 90%;
     }
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25d366;
+    color: var(--color-white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1500;
+    transition: var(--transition);
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 767px) {
+    .whatsapp-float {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 3px 10px rgba(37, 211, 102, 0.4);
+    }
+    
+    .whatsapp-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* --- On-Site WhatsApp CTA Card --- */
+.whatsapp-cta-card {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 4px solid #25d366;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
 }
 
 /* --- Footer --- */

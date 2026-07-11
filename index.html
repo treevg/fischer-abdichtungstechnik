@@ -45,17 +45,7 @@
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 100 100" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 80 L50 20 L90 80 Z" stroke="var(--color-primary)" stroke-width="8" stroke-linejoin="round"/>
-                        <path d="M25 80 L50 45 L75 80" stroke="var(--color-accent)" stroke-width="6" stroke-linejoin="round"/>
-                        <rect x="35" y="80" width="30" height="15" fill="var(--color-primary)"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-title">FISCHER</span>
-                    <span class="logo-subtitle">Dach • Wand • Abdichtungstechnik</span>
-                </div>
+                <img src="images/logo_small.svg" alt="Fischer Dach • Wand • Abdichtungstechnik" class="header-logo-img">
             </a>
             <nav class="main-nav">
                 <a href="#problem">Das Problem</a>
@@ -650,6 +640,21 @@
                                 <p><a href="mailto:info@fischer-abdichtungstechnik.de" class="contact-link">info@fischer-abdichtungstechnik.de</a></p>
                             </div>
                         </div>
+                        <div class="contact-detail-item">
+                            <span class="icon" style="background-color: #25d366; color: white;">💬</span>
+                            <div>
+                                <strong>WhatsApp Chat:</strong>
+                                <p><a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20ein%20Feuchtigkeitsproblem%20und%20interessiere%20mich%20f%C3%BCr%20die%20kostenlose%20Schadenanalyse." class="contact-link" target="_blank" rel="noopener noreferrer">02162 / 24 71 6 (Hier klicken)</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-cta-card mt-4">
+                        <strong>📸 Schadensbilder senden:</strong>
+                        <p class="mt-2">Senden Sie uns ganz einfach Fotos Ihrer feuchten Kellerwand direkt per WhatsApp. Wir geben Ihnen eine kostenlose, unverbindliche Ersteinschätzung!</p>
+                        <a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20Fotos%20meines%20Feuchtigkeitsproblems%20f%C3%BCr%20eine%20Ersteinsch%C3%A4tzung." class="btn btn-secondary mt-2" target="_blank" rel="noopener noreferrer" style="border-color: #25d366; color: #128c7e; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: bold;">
+                            <span style="font-size: 1.2rem;">💬</span> Jetzt Fotos per WhatsApp senden
+                        </a>
                     </div>
 
                     <div class="service-area-badge mt-4">
@@ -769,6 +774,13 @@
             <div id="lightbox-counter" class="lightbox-counter"></div>
         </div>
     </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20ein%20Feuchtigkeitsproblem%20und%20interessiere%20mich%20f%C3%BCr%20die%20kostenlose%20Schadenanalyse." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Kontakt über WhatsApp">
+        <svg viewBox="0 0 24 24" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.05 11.945.05a11.821 11.821 0 0 1 8.412 3.497 11.758 11.758 0 0 1 3.493 8.41c-.004 6.557-5.34 11.854-11.885 11.854a11.8 11.8 0 0 1-5.702-1.47L0 24zm6.59-4.846c1.62.96 3.21 1.46 4.932 1.47 5.174 0 9.382-4.186 9.385-9.333.001-2.494-.97-4.838-2.735-6.606a9.308 9.308 0 0 0-6.61-2.748c-5.18 0-9.39 4.186-9.393 9.334a9.272 9.272 0 0 0 1.429 4.902l-1.012 3.693 3.792-.994zm11.082-6.415c-.265-.13-.1.144-.315-.228-1.562-1.074-.75-.506-.94-.7-.188-.19-.372-.187-.622-.057-.253.13-1.01.833-1.238 1.11-.228.276-.456.311-.72.18-.266-.13-1.124-.415-2.14-1.32-.79-.705-1.325-1.576-1.48-1.838-.155-.262-.017-.404.116-.535.118-.118.265-.31.397-.465.13-.156.175-.262.262-.437.088-.175.044-.328-.022-.459-.066-.13-.594-1.432-.814-1.966-.214-.52-.45-.45-.622-.453-.16-.003-.343-.004-.525-.004-.183 0-.48.068-.73.356-.25.288-1.01.988-1.01 2.408 0 1.42 1.033 2.793 1.177 2.988.144.195 2.032 3.114 4.92 4.35.688.295 1.225.47 1.643.602.69.219 1.32.188 1.815.113.553-.083 1.7-.695 1.942-1.37.24-.674.24-1.253.17-1.37-.073-.12-.266-.185-.53-.315z"/>
+        </svg>
+    </a>
 
     <!-- Interactive JS scripts -->
     <script>
