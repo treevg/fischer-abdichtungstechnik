@@ -56,6 +56,20 @@ def verify_files():
                     print(f"  ✗ Link Broken: {href}")
                     all_links_valid = False
                     
+        # 3. Check Local Images
+        images = re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', content)
+        for img in images:
+            if not img.startswith('http') and not img.startswith('//') and not img.startswith('data:'):
+                # Local image reference
+                # URL unescape for spaces/special chars in file name (e.g. %20 -> space)
+                from urllib.parse import unquote
+                clean_img = unquote(img)
+                if os.path.exists(clean_img):
+                    print(f"  ✓ Image Src Valid: {img}")
+                else:
+                    print(f"  ✗ Image Src Broken: {img}")
+                    all_links_valid = False
+                    
     if not all_links_valid:
         print("\nCRITICAL: Found broken local link references.")
         return False
