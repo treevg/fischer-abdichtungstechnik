@@ -9,6 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Ads (AdWords) Globaler Website-Tag (gtag.js) -->
+    <!-- ANLEITUNG: Ersetze 'AW-XXXXXXXXX' an beiden Stellen mit deiner tatsächlichen Google Ads Conversion-ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-XXXXXXXXX');
+    </script>
 </head>
 <body>
 
@@ -630,6 +640,15 @@
                 generateCaptcha();
                 document.getElementById('captcha').value = '';
                 return;
+            }
+
+            // Google Ads (AdWords) Conversion Event auslösen
+            // ANLEITUNG: Ersetze 'AW-XXXXXXXXX/YYYYYYYYYYYYYYYY' mit deinem tatsächlichen Conversion-Label
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXX/YYYYYYYYYYYYYYYY'
+                });
+                console.log('Google Ads Conversion Event gesendet.');
             }
 
             // Hide form and show success
