@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachträgliche Horizontalsperre | Fischer Abdichtungstechnik</title>
+    <meta name="description" content="Professionelle Mauerwerksabdichtung & nachträgliche Horizontalsperre im Injektionsverfahren ohne Erdarbeiten. Kostenfreie Schadenanalyse vor Ort!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Upper Utility Bar -->
+    <div class="utility-bar">
+        <div class="container utility-content">
+            <div class="utility-left">
+                <span>📍 Rektoratstraße 74, 41747 Viersen</span>
+                <span>📞 <a href="tel:+49216224716">02162 / 24 71 6</a></span>
+                <span>✉️ <a href="mailto:info@fischer-abdichtungstechnik.de">info@fischer-abdichtungstechnik.de</a></span>
+            </div>
+            <div class="utility-right">
+                <span class="badge">Meisterbetrieb HWK Düsseldorf</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 80 L50 20 L90 80 Z" stroke="var(--color-primary)" stroke-width="8" stroke-linejoin="round"/>
+                        <path d="M25 80 L50 45 L75 80" stroke="var(--color-accent)" stroke-width="6" stroke-linejoin="round"/>
+                        <rect x="35" y="80" width="30" height="15" fill="var(--color-primary)"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">FISCHER</span>
+                    <span class="logo-subtitle">Dach • Wand • Abdichtungstechnik</span>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <a href="#problem">Das Problem</a>
+                <a href="#loesung">Die Lösung</a>
+                <a href="#ablauf">4-Schritt-Ablauf</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontakt" class="btn btn-primary nav-cta">Kostenfreie Analyse</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Menü öffnen" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <span class="hero-tagline">Nachträgliche Horizontalsperre</span>
+                    <h1>Aufsteigende Feuchtigkeit im Mauerwerk stoppen</h1>
+                    <p class="hero-lead">Nasser Keller, abblätternder Putz oder Schimmelbefall? Unsere WTA-zertifizierte Horizontalsperre schützt Ihr Haus dauerhaft von innen – ganz ohne teures Aufgraben von außen.</p>
+                    
+                    <div class="hero-benefits">
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span><strong>Keine Erdarbeiten:</strong> Saubere Ausführung komplett von innen</span>
+                        </div>
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span><strong>Kostenfreie Schadenanalyse:</strong> Kompetent vor Ort bei Ihnen</span>
+                        </div>
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span><strong>WTA-zertifiziert:</strong> Nachhaltige Wirkung durch modernste Injektionstechnik</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#kontakt" class="btn btn-accent btn-large">Jetzt freie Termine anfragen!</a>
+                        <a href="tel:+49216224716" class="btn btn-secondary btn-large">📞 02162 / 24 71 6</a>
+                    </div>
+                </div>
+                <div class="hero-visual-content">
+                    <div class="visual-wrapper">
+                        <!-- Custom SVG showing a house with rising dampness blocked by a barrier -->
+                        <svg viewBox="0 0 500 400" class="hero-svg" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Grid -->
+                            <rect width="500" height="400" fill="#f8fafc" rx="16"/>
+                            
+                            <!-- House outline -->
+                            <path d="M100 280 L100 160 L250 60 L400 160 L400 280 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+                            <path d="M80 160 L250 40 L420 160" stroke="var(--color-primary)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Ground line -->
+                            <line x1="50" y1="280" x2="450" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+                            <!-- Ground/Basement filling -->
+                            <rect x="100" y="280" width="300" height="90" fill="#f1f5f9"/>
+                            
+                            <!-- Dampness rising (Left side - unprotected) -->
+                            <path d="M110 370 Q115 340 110 310 T110 250" stroke="#38bdf8" stroke-width="4" stroke-dasharray="5 5" fill="none" opacity="0.8"/>
+                            <path d="M130 370 Q135 340 130 310 T130 260" stroke="#38bdf8" stroke-width="4" stroke-dasharray="5 5" fill="none" opacity="0.8"/>
+                            <path d="M150 370 Q145 340 150 310 T145 270" stroke="#38bdf8" stroke-width="4" stroke-dasharray="5 5" fill="none" opacity="0.8"/>
+                            <text x="110" y="235" fill="#0284c7" font-size="12" font-weight="bold">Feuchtigkeit steigt auf</text>
+                            
+                            <!-- Barrier Injection (Right side - protected) -->
+                            <!-- Horizontal Barrier Line -->
+                            <line x1="280" y1="310" x2="390" y2="310" stroke="var(--color-accent)" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="295" cy="310" r="4" fill="#ffffff"/>
+                            <circle cx="320" cy="310" r="4" fill="#ffffff"/>
+                            <circle cx="345" cy="310" r="4" fill="#ffffff"/>
+                            <circle cx="370" cy="310" r="4" fill="#ffffff"/>
+                            
+                            <!-- Dry Area Indicator -->
+                            <rect x="285" y="180" width="105" height="110" fill="#f0fdf4" rx="8" opacity="0.9"/>
+                            <text x="300" y="220" fill="#166534" font-size="14" font-weight="bold">✓ TROCKEN</text>
+                            <text x="300" y="240" fill="#166534" font-size="11">Dauerhafter Schutz</text>
+                            <text x="300" y="255" fill="#166534" font-size="11">durch Injektion</text>
+                            
+                            <!-- Wet Area Indicator (Left) -->
+                            <rect x="110" y="180" width="115" height="40" fill="#fef2f2" rx="8" opacity="0.9"/>
+                            <text x="120" y="205" fill="#991b1b" font-size="13" font-weight="bold">⚠️ FEUCHT</text>
+                            
+                            <!-- Labels -->
+                            <text x="300" y="335" fill="var(--color-accent)" font-size="11" font-weight="bold">Injektions-Horizontalsperre</text>
+                            <text x="180" y="375" fill="#64748b" font-size="12">Mauerwerk im Kellerbereich</text>
+                        </svg>
+                        <div class="visual-badge">
+                            <span class="number">100%</span>
+                            <span class="text">Dichtgarantie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- USPs / Badges -->
+        <section class="usps-section">
+            <div class="container grid-4">
+                <div class="usp-card">
+                    <div class="usp-icon">🏗️</div>
+                    <h3>Ohne Erdarbeiten</h3>
+                    <p>Kein Aufgraben des Gartens oder der Auffahrt. Wir arbeiten sauber und direkt von der Kellerinnenseite.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">🛡️</div>
+                    <h3>Zertifizierte WTA-Qualität</h3>
+                    <p>Einsatz von behördlich geprüften, ökologischen Injektionsharzen und Dichtcremes mit Langzeitwirkung.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">📊</div>
+                    <h3>Festpreis-Garantie</h3>
+                    <p>Nach unserer kostenfreien Analyse erhalten Sie ein transparentes Festpreisangebot ohne versteckte Kosten.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">🇩🇪</div>
+                    <h3>Meisterbetrieb</h3>
+                    <p>Über 35 Jahre Erfahrung in der Bauwerksabdichtung und Kellersanierung rund um Viersen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="problem-section section-padding">
+            <div class="container text-center max-width-800">
+                <span class="section-tag">Gefahren erkennen</span>
+                <h2>Das Problem: Aufsteigende Feuchtigkeit & Schimmel</h2>
+                <p class="section-lead">Fehlt eine Horizontalsperre im Fundament oder ist diese über die Jahrzehnte porös geworden, saugt das Mauerwerk Wasser wie ein Schwamm aus dem Erdreich auf. Die Folgen sind gravierend für die Bausubstanz und Ihre Gesundheit.</p>
+            </div>
+
+            <div class="container grid-3 mt-4">
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <!-- Damp Wall SVG -->
+                        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f1f5f9"/>
+                            <!-- Wall texture -->
+                            <rect x="20" y="20" width="80" height="30" rx="4" fill="#cbd5e1"/>
+                            <rect x="110" y="20" width="80" height="30" rx="4" fill="#cbd5e1"/>
+                            <rect x="200" y="20" width="80" height="30" rx="4" fill="#cbd5e1"/>
+                            <rect x="50" y="60" width="80" height="30" rx="4" fill="#94a3b8"/>
+                            <rect x="140" y="60" width="80" height="30" rx="4" fill="#cbd5e1"/>
+                            <rect x="230" y="60" width="50" height="30" rx="4" fill="#cbd5e1"/>
+                            <rect x="20" y="100" width="80" height="30" rx="4" fill="#64748b"/>
+                            <rect x="110" y="100" width="80" height="30" rx="4" fill="#475569"/>
+                            <rect x="200" y="100" width="80" height="30" rx="4" fill="#64748b"/>
+                            <!-- Wet overlay gradient representing dampness rising from bottom -->
+                            <rect x="0" y="120" width="300" height="80" fill="url(#wet-gradient)" opacity="0.6"/>
+                            <defs>
+                                <linearGradient id="wet-gradient" x1="0" y1="1" x2="0" y2="0">
+                                    <stop offset="0%" stop-color="#38bdf8"/>
+                                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Water droplets -->
+                            <circle cx="70" cy="150" r="3" fill="#0284c7"/>
+                            <circle cx="160" cy="170" r="4" fill="#0284c7"/>
+                            <circle cx="240" cy="140" r="3" fill="#0284c7"/>
+                        </svg>
+                    </div>
+                    <div class="problem-content">
+                        <h3>Abblätternder Putz & Salze</h3>
+                        <p>Das aufsteigende Wasser transportiert Salze aus dem Boden ins Mauerwerk. Beim Trocknen kristallisieren diese, dehnen sich aus und sprengen Putz und Wandfarbe ab.</p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <!-- Mold SVG -->
+                        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f1f5f9"/>
+                            <!-- Wall corner -->
+                            <line x1="150" y1="0" x2="150" y2="200" stroke="#cbd5e1" stroke-width="2"/>
+                            <!-- Mold spores / spots on corner -->
+                            <circle cx="150" cy="100" r="25" fill="#1e293b" opacity="0.8" filter="blur(2px)"/>
+                            <circle cx="140" cy="110" r="15" fill="#0f172a" opacity="0.9"/>
+                            <circle cx="165" cy="85" r="18" fill="#334155" opacity="0.75"/>
+                            <circle cx="150" cy="60" r="10" fill="#1e293b" opacity="0.8"/>
+                            <circle cx="130" cy="140" r="12" fill="#475569" opacity="0.8"/>
+                            <!-- Greenish spores -->
+                            <circle cx="155" cy="120" r="14" fill="#14532d" opacity="0.8"/>
+                            <circle cx="145" cy="90" r="8" fill="#166534" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="problem-content">
+                        <h3>Schimmelpilz & Sporen</h3>
+                        <p>Dauerhaft feuchte Kellerwände bieten den perfekten Nährboden für gefährlichen schwarzen Schimmel. Die Sporen belasten die Raumluft und gefährden die Gesundheit Ihrer Familie.</p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-image">
+                        <!-- Structural Damage SVG -->
+                        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f1f5f9"/>
+                            <!-- Brick Wall with crack -->
+                            <rect x="20" y="30" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="95" y="30" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="170" y="30" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="40" y="60" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="115" y="60" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="190" y="60" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="20" y="90" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="95" y="90" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <rect x="170" y="90" width="70" height="25" rx="2" fill="#cbd5e1"/>
+                            <!-- Crack line -->
+                            <path d="M130 10 L135 50 L125 90 L140 130 L130 190" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <!-- Warning Icon -->
+                            <path d="M260 160 L280 190 L240 190 Z" fill="#e11d48"/>
+                            <text x="257" y="185" fill="#ffffff" font-size="12" font-weight="bold">!</text>
+                        </svg>
+                    </div>
+                    <div class="problem-content">
+                        <h3>Verlust der Bausubstanz</h3>
+                        <p>Das Wasser schwächt das Bindemittel im Mauerwerk. Über Jahre hinweg verliert der Stein seine Tragfähigkeit, was den Wert des Gebäudes massiv mindert und zu Rissen führt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="loesung" class="solution-section section-padding bg-light">
+            <div class="container grid-2 align-center">
+                <div class="solution-visual">
+                    <!-- Technical drilling/injection SVG -->
+                    <svg viewBox="0 0 450 350" class="solution-svg" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="450" height="350" fill="#ffffff" rx="12" stroke="#e2e8f0" stroke-width="2"/>
+                        
+                        <!-- Ground line -->
+                        <line x1="20" y1="280" x2="430" y2="280" stroke="#94a3b8" stroke-width="4"/>
+                        <rect x="0" y="280" width="450" height="70" fill="#f1f5f9" rx="12"/>
+                        
+                        <!-- Wall Section (Large) -->
+                        <rect x="80" y="40" width="120" height="240" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+                        <line x1="80" y1="100" x2="200" y2="100" stroke="#cbd5e1"/>
+                        <line x1="80" y1="160" x2="200" y2="160" stroke="#cbd5e1"/>
+                        <line x1="80" y1="220" x2="200" y2="220" stroke="#cbd5e1"/>
+                        
+                        <!-- Drill hole (diagonal) -->
+                        <path d="M60 210 L150 250" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
+                        <path d="M60 210 L150 250" stroke="var(--color-accent)" stroke-width="6" stroke-linecap="round"/>
+                        
+                        <!-- Injection Cream spreading -->
+                        <circle cx="150" cy="250" r="22" fill="var(--color-accent)" opacity="0.3"/>
+                        <circle cx="150" cy="250" r="12" fill="var(--color-accent)"/>
+                        
+                        <!-- Specialized Injection Device / Packer -->
+                        <rect x="30" y="195" width="30" height="15" fill="#475569" rx="2"/>
+                        <line x1="15" y1="202" x2="30" y2="202" stroke="#475569" stroke-width="4"/>
+                        
+                        <!-- Rising water blocked -->
+                        <path d="M100 270 Q95 260 100 250" stroke="#0284c7" stroke-width="3" stroke-dasharray="3 3" fill="none"/>
+                        <path d="M120 270 Q115 260 120 250" stroke="#0284c7" stroke-width="3" stroke-dasharray="3 3" fill="none"/>
+                        <!-- Wet indicator bottom -->
+                        <rect x="81" y="250" width="118" height="29" fill="#0284c7" opacity="0.15"/>
+                        <!-- Dry indicator top -->
+                        <rect x="81" y="41" width="118" height="190" fill="#22c55e" opacity="0.08"/>
+                        
+                        <!-- Labels & Callouts -->
+                        <g transform="translate(240, 60)">
+                            <text x="0" y="20" fill="var(--color-primary)" font-size="16" font-weight="bold">Das Injektionsverfahren</text>
+                            <text x="0" y="45" fill="#475569" font-size="13">1. Diagonale Bohrlöcher im</text>
+                            <text x="15" y="62" fill="#475569" font-size="13">unteren Wandbereich setzen.</text>
+                            
+                            <text x="0" y="95" fill="#475569" font-size="13">2. Hochwirksame WTA-Cremes</text>
+                            <text x="15" y="112" fill="#475569" font-size="13">oder Harze einpressen.</text>
+                            
+                            <text x="0" y="145" fill="#475569" font-size="13">3. Das Material breitet sich aus und</text>
+                            <text x="15" y="162" fill="#475569" font-size="13">bildet eine 100% dichte Barriere.</text>
+                            
+                            <text x="0" y="195" fill="var(--color-accent)" font-size="13" font-weight="bold">✓ Kein Außen-Aufgraben nötig!</text>
+                            <text x="0" y="215" fill="var(--color-accent)" font-size="13" font-weight="bold">✓ Dauerhafter, lebenslanger Schutz.</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="solution-text">
+                    <span class="section-tag">Die Rettung für Ihr Haus</span>
+                    <h2>Die Lösung: Nachträgliche Horizontalsperre</h2>
+                    <p>Mit unserer modernen, mechanischen oder chemischen **Injektionsmethode** errichten wir eine unüberwindbare Barriere direkt im Mauerwerk Ihres Hauses. Die Spezialflüssigkeit oder Creme dringt in die feinsten Kapillaren ein und härtet dort elastisch aus.</p>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🏢</span>
+                            <div>
+                                <h4>Für alle Mauerwerksarten</h4>
+                                <p>Egal ob Ziegel, Naturstein, Beton oder Mischmauerwerk – wir passen das Material präzise an.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🧪</span>
+                            <div>
+                                <h4>Umweltfreundlich & Geruchlos</h4>
+                                <p>Die verwendeten Injektionsstoffe sind lösungsmittelfrei, geruchsneutral und absolut unbedenklich für Wohnräume.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">⏱️</span>
+                            <div>
+                                <h4>Schnelle Ausführung</h4>
+                                <p>Ein durchschnittlicher Keller ist meist in nur 1–2 Tagen komplett saniert und sofort wieder bezugsfertig.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4-Steps Sektion -->
+        <section id="ablauf" class="steps-section section-padding">
+            <div class="container text-center max-width-800">
+                <span class="section-tag">Einfach & Sorgenfrei</span>
+                <h2>In 4 Schritten zum trockenen Keller</h2>
+                <p class="section-lead">Wir machen Ihnen die Sanierung so einfach wie möglich. Vom ersten Kontakt bis zur professionellen Abnahme erhalten Sie alles aus einer Hand.</p>
+            </div>
+
+            <div class="container grid-4 mt-4">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Termin vereinbaren</h3>
+                    <p>Kontaktieren Sie uns telefonisch oder über das Online-Formular für Ihre kostenfreie Erstberatung.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Kostenfreie Schadenanalyse</h3>
+                    <p>Ein zertifizierter Sachverständiger prüft das Mauerwerk vor Ort mit modernsten Messgeräten.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Transparentes Festpreisangebot</h3>
+                    <p>Sie erhalten ein maßgeschneidertes Sanierungskonzept mit einer garantierten Festpreiszusage.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <h3>Professionelle Ausführung</h3>
+                    <p>Unsere gelernten Abdichtungstechniker führen die Arbeiten pünktlich, sauber und WTA-gerecht aus.</p>
+                </div>
+            </div>
+
+            <div class="container text-center mt-4">
+                <a href="#kontakt" class="btn btn-accent btn-large">Jetzt Termin für Schadenanalyse anfragen!</a>
+            </div>
+        </section>
+
+        <!-- FAQ Sektion -->
+        <section id="faq" class="faq-section section-padding bg-light">
+            <div class="container text-center max-width-800">
+                <span class="section-tag">Häufige Fragen</span>
+                <h2>Fragen zur Horizontalsperre & Kellerabdichtung</h2>
+                <p class="section-lead">Hier finden Sie Antworten auf die wichtigsten Fragen unserer Kunden. Haben Sie weitere Fragen? Sprechen Sie uns gerne an!</p>
+            </div>
+
+            <div class="container max-width-800 mt-4">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Woran erkenne ich, dass meine Horizontalsperre defekt ist?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typische Anzeichen sind feuchte Stellen am unteren Wandbereich (oberhalb der Fußleiste), abblätternde Wandfarbe, bröckelnder Putz, weiße Ausblühungen (Salzkristalle) oder ein muffiger, modriger Geruch im Kellerraum.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Wie lange hält eine nachträgliche Injektions-Horizontalsperre?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dank modernster WTA-zertifizierter Injektionsmaterialien und unserer professionellen Ausführung hält eine solche Horizontalsperre in der Regel über 30 bis 50 Jahre – oft überdauert sie die gesamte restliche Lebensdauer des Gebäudes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Ist ein Aufgraben von außen wirklich nicht notwendig?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja! Bei aufsteigender Feuchtigkeit reicht eine Horizontalsperre aus. Da wir diese durch schräge Bohrlöcher direkt von der Innenseite des Kellers einbringen, bleibt Ihr Garten, die Terrasse oder die Garageneinfahrt völlig unberührt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Wie hoch sind die Kosten für eine Horizontalsperre?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Die Kosten hängen von der Wandstärke, dem gewählten Material und der Gesamtlänge der abzudichtenden Wände ab. Deshalb bieten wir Ihnen eine komplett kostenfreie und unverbindliche Schadensanalyse vor Ort an, um Ihnen anschließend ein präzises Festpreisangebot zu erstellen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt & Formular -->
+        <section id="kontakt" class="contact-section section-padding">
+            <div class="container grid-2">
+                <div class="contact-info-block">
+                    <span class="section-tag">Kontakt</span>
+                    <h2>Jetzt kostenfreie Schadenanalyse vereinbaren!</h2>
+                    <p class="contact-lead">Überlassen Sie feuchte Wände nicht dem Zufall. Sichern Sie sich Ihren kostenfreien Beratungstermin inklusive professioneller Feuchtigkeitsmessung vor Ort.</p>
+                    
+                    <div class="contact-details mt-4">
+                        <div class="contact-detail-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Adresse:</strong>
+                                <p>Fischer Dach • Wand • Abdichtungstechnik GmbH<br>Rektoratstraße 74, 41747 Viersen</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong>Telefonnummer:</strong>
+                                <p><a href="tel:+49216224716" class="contact-link">02162 / 24 71 6</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong>E-Mail:</strong>
+                                <p><a href="mailto:info@fischer-abdichtungstechnik.de" class="contact-link">info@fischer-abdichtungstechnik.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-area-badge mt-4">
+                        <strong>📍 Unser Einsatzgebiet:</strong> Viersen, Mönchengladbach, Krefeld, Neuss, Meerbusch, Kaarst, Willich & Umgebung.
+                    </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <h3>Online-Terminanfrage</h3>
+                    <p class="form-subtitle">Bitte füllen Sie das Formular aus. Wir melden uns werktags innerhalb von 2 Stunden bei Ihnen!</p>
+                    
+                    <form id="leadForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ihr Name *</label>
+                                <input type="text" id="name" required placeholder="z. B. Max Mustermann">
+                            </div>
+                        </div>
+                        <div class="form-row grid-2-col">
+                            <div class="form-group">
+                                <label for="phone">Telefonnummer *</label>
+                                <input type="tel" id="phone" required placeholder="Für Rückfragen zum Termin">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail-Adresse *</label>
+                                <input type="email" id="email" required placeholder="ihre.mail@beispiel.de">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Kurze Beschreibung des Problems</label>
+                            <textarea id="message" rows="4" placeholder="z. B. Feuchte Flecken im Keller, bröckelnder Putz an einer Außenwand..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert und verarbeitet werden. (<a href="datenschutz.html">Datenschutzerklärung</a>) *</label>
+                        </div>
+
+                        <!-- Anti-Spam Captcha -->
+                        <div class="captcha-box">
+                            <label for="captcha">Spamschutz: Was ist <strong id="captcha-question">5 + 6</strong>? *</label>
+                            <input type="number" id="captcha" required placeholder="Ihr Ergebnis">
+                        </div>
+
+                        <button type="submit" class="btn btn-accent btn-full">Absenden & Termin sichern</button>
+                    </form>
+                    <div id="form-success-message" class="success-alert" style="display: none;">
+                        <h4>Vielen Dank für Ihre Anfrage!</h4>
+                        <p>Wir haben Ihre Nachricht erhalten und melden uns in Kürze telefonisch bei Ihnen, um den Termin für die kostenfreie Analyse abzustimmen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col branding-col">
+                <div class="logo">
+                    <div class="logo-text">
+                        <span class="logo-title white-text">FISCHER</span>
+                        <span class="logo-subtitle gray-text">Dach • Wand • Abdichtungstechnik</span>
+                    </div>
+                </div>
+                <p class="footer-desc mt-2">Ihr zertifizierter Meisterbetrieb für dauerhaft trockene Keller und sicheres Wohnen. Seit 1989 Ihr Partner am Niederrhein.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Unsere Leistungen</h3>
+                <ul class="footer-links">
+                    <li><a href="#loesung">Horizontalsperren</a></li>
+                    <li><a href="#problem">Kellerinnensanierung</a></li>
+                    <li><a href="#">Außenabdichtung</a></li>
+                    <li><a href="#">Rissverpressung</a></li>
+                    <li><a href="#">Schimmelsanierung</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Einsatzorte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Viersen</a></li>
+                    <li><a href="#">Mönchengladbach</a></li>
+                    <li><a href="#">Krefeld & Neuss</a></li>
+                    <li><a href="#">Düsseldorf (Umland)</a></li>
+                    <li><a href="#">Willich & Kaarst</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Zertifikate & Partner</h3>
+                <div class="certificates">
+                    <span class="cert-badge">WTA-Zertifiziert</span>
+                    <span class="cert-badge">HWK Meisterbetrieb</span>
+                    <span class="cert-badge">TÜV-Überwacht</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Fischer Dach • Wand • Abdichtungstechnik GmbH. Alle Rechte vorbehalten.</p>
+                <div class="footer-meta-links">
+                    <a href="impressum.html" id="link-impressum">Impressum</a>
+                    <a href="datenschutz.html" id="link-datenschutz">Datenschutz</a>
+                    <a href="#">Cookie-Einstellungen</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS scripts -->
+    <script>
+        // Toggle Mobile Navigation Menu
+        function toggleMobileNav() {
+            const nav = document.querySelector('.main-nav');
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            nav.classList.toggle('nav-active');
+            toggle.classList.toggle('toggle-active');
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const icon = btn.querySelector('.faq-toggle-icon');
+            
+            // Toggle active class
+            item.classList.toggle('faq-active');
+            
+            if (item.classList.contains('faq-active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.textContent = "−";
+            } else {
+                answer.style.maxHeight = null;
+                icon.textContent = "+";
+            }
+        }
+
+        // Dynamic Captcha setup
+        let captchaVal1 = 0;
+        let captchaVal2 = 0;
+        let captchaResult = 0;
+
+        function generateCaptcha() {
+            captchaVal1 = Math.floor(Math.random() * 10) + 2; // 2-11
+            captchaVal2 = Math.floor(Math.random() * 9) + 1;  // 1-9
+            captchaResult = captchaVal1 + captchaVal2;
+            document.getElementById('captcha-question').textContent = `${captchaVal1} + ${captchaVal2}`;
+        }
+
+        // Initialize captcha on load
+        window.addEventListener('DOMContentLoaded', () => {
+            generateCaptcha();
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const captchaInput = parseInt(document.getElementById('captcha').value);
+            
+            if (captchaInput !== captchaResult) {
+                alert('Spamschutz-Prüfung fehlgeschlagen. Bitte berechnen Sie die Summe erneut.');
+                generateCaptcha();
+                document.getElementById('captcha').value = '';
+                return;
+            }
+
+            // Hide form and show success
+            document.getElementById('leadForm').style.display = 'none';
+            document.getElementById('form-success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
