@@ -269,7 +269,7 @@ p {
 }
 
 .footer-logo-img {
-    height: 52px;
+    height: 156px;
     width: auto;
     display: block;
     filter: brightness(0) invert(1); /* Inverts dark grey to solid clean white for high contrast */
