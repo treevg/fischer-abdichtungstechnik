@@ -899,6 +899,34 @@
                 return;
             }
 
+            // Gather Lead Data
+            const leadData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send lead data to secure PHP mailer in the background
+            fetch('send_lead.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(leadData)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    console.log('Lead successfully sent to inbox via send_lead.php');
+                } else {
+                    console.error('PHP Mailer reported failure:', result.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form data:', error);
+            });
+
             // Google Ads & Google Analytics Event auslösen
             if (typeof gtag === 'function') {
                 // 1. Google Ads Conversion
@@ -916,7 +944,7 @@
                 console.log('Google Analytics GA4 generate_lead Event gesendet.');
             }
 
-            // Hide form and show success
+            // Hide form and show success immediately for instant visual response
             document.getElementById('leadForm').style.display = 'none';
             document.getElementById('form-success-message').style.display = 'block';
         }
