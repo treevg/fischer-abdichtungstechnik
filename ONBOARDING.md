@@ -32,10 +32,10 @@ Um direkt in die Entwicklung oder Pflege der Seite einzusteigen, haben wir hier 
 
 ```bash
 # 1. Repository von GitHub klonen (Ersetze [ORGA/REPO] mit dem tatsächlichen Link)
-git clone https://github.com/[ORGA/REPO]/my-test-website.git
+git clone https://github.com/[ORGA/REPO]/fischer-abdichtungstechnik.git
 
 # 2. In den Projektordner wechseln
-cd my-test-website
+cd fischer-abdichtungstechnik
 
 # 3. Projekt direkt in VS Code öffnen
 code .
