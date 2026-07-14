@@ -9,6 +9,8 @@
     --color-secondary: #475569;     /* Gray slate for text */
     --color-accent: #c0392b;        /* Signal/Brick Red from Fischer */
     --color-accent-hover: #962d22;  /* Darker Red */
+    --color-accent-blue: #0ea5e9;   /* High-Fidelity Light Blue accent */
+    --color-accent-blue-hover: #0284c7;
     --color-light: #f8fafc;         /* Crisp Light Background */
     --color-white: #ffffff;
     --color-dark-bg: #0f172a;       /* Dark theme for footer */
@@ -127,7 +129,7 @@ p {
 
 .section-tag {
     display: inline-block;
-    color: var(--color-accent);
+    color: var(--color-accent-blue);
     font-family: var(--font-title);
     font-weight: 700;
     text-transform: uppercase;
@@ -365,8 +367,8 @@ p {
 
 .hero-tagline {
     display: inline-block;
-    background-color: rgba(192, 57, 43, 0.1);
-    color: var(--color-accent);
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--color-accent-blue);
     padding: 0.35rem 0.85rem;
     border-radius: 2rem;
     font-family: var(--font-title);
@@ -398,7 +400,7 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-primary);
+    background-color: var(--color-accent-blue);
     color: var(--color-white);
     width: 20px;
     height: 20px;
