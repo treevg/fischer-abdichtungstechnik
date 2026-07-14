@@ -396,20 +396,12 @@
         <section id="referenzen" class="gallery-section section-padding">
             <div class="container text-center max-width-800">
                 <span class="section-tag">Erfolge vor Ort</span>
-                <h2>Unsere Referenzen & echte Kundenprojekte</h2>
-                <p class="section-lead">Überzeugen Sie sich von unserer meisterhaften Handwerksarbeit. Hier sehen Sie Auszüge aus echten, erfolgreich abgeschlossenen Sanierungen unseres Meisterbetriebs.</p>
-                
-                <!-- Filter Tabs -->
-                <div class="gallery-filters mt-4">
-                    <button class="filter-btn active" onclick="filterGallery('all', this)">Alle Projekte</button>
-                    <button class="filter-btn" onclick="filterGallery('horizontalsperre', this)">Horizontalsperre & Rissverpressung</button>
-                    <button class="filter-btn" onclick="filterGallery('keller', this)">Kellerabdichtung Innen</button>
-                    <button class="filter-btn" onclick="filterGallery('balkon-dach', this)">Balkon & Dach</button>
-                </div>
+                <h2>Unsere Referenzen &amp; echte Kundenprojekte</h2>
+                <p class="section-lead">Überzeugen Sie sich von unserer meisterhaften Handwerksarbeit. Hier sehen Sie Auszüge aus erfolgreich abgeschlossenen Horizontalsperren und Rissverpressungen unseres Fachbetriebs.</p>
             </div>
 
             <div class="container mt-4">
-                <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-grid" id="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                     
                     <!-- Card 1: Horizontalsperre Wohnhaus -->
                     <div class="gallery-item horizontalsperre">
@@ -417,7 +409,7 @@
                             <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/Salzmann.jpeg')" style="cursor: pointer;">
                                 <img src="photos/Horizontalsperre- Rissverpressung/Salzmann.jpeg" alt="Nachträgliche Horizontalsperre Wohnhaus" loading="lazy">
                                 <span class="gallery-badge">Horizontalsperre</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
+                                <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
                             <div class="gallery-item-desc">
                                 <h4>Horizontalsperre Wohnhaus</h4>
@@ -427,130 +419,50 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Kellerabdichtung Einfamilienhaus -->
-                    <div class="gallery-item keller">
-                        <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('keller', 'photos/Kellerabdichtung Innen/Biehnr.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Kellerabdichtung Innen/Biehnr.jpeg" alt="Kellerinnenabdichtung Einfamilienhaus" loading="lazy">
-                                <span class="gallery-badge">Kellerabdichtung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
-                            </div>
-                            <div class="gallery-item-desc">
-                                <h4>Kellerinnenabdichtung</h4>
-                                <span class="gallery-location">📍 Mönchengladbach</span>
-                                <p>Professionelle Innenabdichtung nach WTA-Richtlinien. Dauerhafter Schutz vor seitlich eindringender Feuchtigkeit.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Horizontalsperre Altbau -->
+                    <!-- Card 2: Rissverpressung Altbau -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
                             <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg')" style="cursor: pointer;">
                                 <img src="photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg" alt="Mauerwerkssanierung Altbau" loading="lazy">
                                 <span class="gallery-badge">Rissverpressung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
+                                <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
                             <div class="gallery-item-desc">
-                                <h4>Rissverpressung &amp; Horizontalsperre</h4>
+                                <h4>Rissverpressung Altbau</h4>
                                 <span class="gallery-location">📍 Krefeld</span>
-                                <p>Spezial-Rissverpressung und Horizontalsperre im Altbaubereich zur Stabilisierung und Entfeuchtung.</p>
+                                <p>Spezial-Rissverpressung im Altbaubereich zur kraftschlüssigen Stabilisierung und Feuchtigkeitssperre des Mauerwerks.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 4: Kellerabdichtung Wohnhaus -->
-                    <div class="gallery-item keller">
-                        <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('keller', 'photos/Kellerabdichtung Innen/Seran.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Kellerabdichtung Innen/Seran.jpeg" alt="Sanierung Kellerwand" loading="lazy">
-                                <span class="gallery-badge">Kellerabdichtung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
-                            </div>
-                            <div class="gallery-item-desc">
-                                <h4>Kellerabdichtung</h4>
-                                <span class="gallery-location">📍 Kaarst</span>
-                                <p>WTA-zertifizierte Kellerinnenabdichtung an hochbelasteten Wänden inklusive Sanierputz-System.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Horizontalsperre Mehrfamilienhaus -->
+                    <!-- Card 3: Horizontalsperre Mehrfamilienhaus -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
                             <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg" alt="Bauwerksabdichtung Mehrfamilienhaus" loading="lazy">
+                                <img src="photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg" alt="Injektionsverfahren Mehrfamilienhaus" loading="lazy">
                                 <span class="gallery-badge">Horizontalsperre</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
+                                <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
                             <div class="gallery-item-desc">
                                 <h4>Mehrfamilienhaus-Sanierung</h4>
                                 <span class="gallery-location">📍 Neuss</span>
-                                <p>Großflächiges Injektionsverfahren in einem historischen Mehrfamilienhaus zur Wertsteigerung.</p>
+                                <p>Großflächiges Injektionsverfahren zur Horizontalsperre in einem historischen Mehrfamilienhaus zur Wertsicherung.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card 6: Balkonsanierung Wohnhaus -->
-                    <div class="gallery-item balkon-dach">
-                        <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('balkon', 'photos/Balkonsanierung/Michelle Blumenhoven Mönchengladbach.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Balkonsanierung/Michelle Blumenhoven Mönchengladbach.jpeg" alt="Balkonabdichtung" loading="lazy">
-                                <span class="gallery-badge">Balkonsanierung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
-                            </div>
-                            <div class="gallery-item-desc">
-                                <h4>Balkonabdichtung &amp; Belag</h4>
-                                <span class="gallery-location">📍 Mönchengladbach</span>
-                                <p>Komplette Entwässerung, Abdichtung und Oberflächenbelag eines stark verwitterten Balkons.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 7: Kellerabdichtung Sickerwasserschutz -->
-                    <div class="gallery-item keller">
-                        <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('keller', 'photos/Kellerabdichtung Innen/Salzmann.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Kellerabdichtung Innen/Salzmann.jpeg" alt="Kellerinnenabdichtung gegen Sickerwasser" loading="lazy">
-                                <span class="gallery-badge">Kellerabdichtung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
-                            </div>
-                            <div class="gallery-item-desc">
-                                <h4>Kellerinnensanierung</h4>
-                                <span class="gallery-location">📍 Viersen</span>
-                                <p>Schutzbeschichtung der Kellerinnenwände gegen Sickerwasser inklusive Boden-Wand-Anschlussabdichtung.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8: Bedachung Steildach -->
-                    <div class="gallery-item balkon-dach">
-                        <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('dach', 'photos/Bedachungen/Lochmann.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Bedachungen/Lochmann.jpeg" alt="Dachsanierung Steildach" loading="lazy">
-                                <span class="gallery-badge">Bedachung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
-                            </div>
-                            <div class="gallery-item-desc">
-                                <h4>Meisterbedachung</h4>
-                                <span class="gallery-location">📍 Willich</span>
-                                <p>Erstklassige Bedachungs- und Abdichtungsarbeiten am Steildach durch unsere Dachdecker-Meister.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 9: Rissverpressung Altbau -->
+                    <!-- Card 4: Rissverpressung Altbau (Regnery) -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
                             <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg')" style="cursor: pointer;">
                                 <img src="photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg" alt="Mauerwerks-Rissverpressung Altbau" loading="lazy">
                                 <span class="gallery-badge">Rissverpressung</span>
-                                <div class="gallery-img-overlay"><span>🔍 Ordner öffnen</span></div>
+                                <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
                             <div class="gallery-item-desc">
-                                <h4>Rissverpressung Altbau</h4>
+                                <h4>Rissverpressung Wohnhaus</h4>
                                 <span class="gallery-location">📍 Meerbusch</span>
-                                <p>Kraftschlüssiges Verpressen von Mauerwerksrissen mit WTA-geprüftem Spezialmaterial zur Wiederherstellung der Standsicherheit.</p>
+                                <p>Kraftschlüssiges Verpressen von Mauerwerksrissen mit WTA-geprüftem Spezialmaterial zur Standsicherungs-Wiederherstellung.</p>
                             </div>
                         </div>
                     </div>
@@ -886,22 +798,6 @@
                 'photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg',
                 'photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg',
                 'photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg'
-            ],
-            'keller': [
-                'photos/Kellerabdichtung Innen/Biehnr.jpeg',
-                'photos/Kellerabdichtung Innen/Seran.jpeg',
-                'photos/Kellerabdichtung Innen/P und Z Immobilien.jpeg',
-                'photos/Kellerabdichtung Innen/Salzmann.jpeg',
-                'photos/Kellerabdichtung Innen/Salzmann (1).jpeg',
-                'photos/Kellerabdichtung Innen/Salzmann (1)(1).jpeg'
-            ],
-            'balkon': [
-                'photos/Balkonsanierung/Michelle Blumenhoven Mönchengladbach.jpeg',
-                'photos/Balkonsanierung/Michelle Blumenhoven Mönchengladbach (1).jpeg',
-                'photos/Balkonsanierung/👍✉️Michelle Blumenhoven Mönchengladbach.jpeg'
-            ],
-            'dach': [
-                'photos/Bedachungen/Lochmann.jpeg'
             ]
         };
 
@@ -1039,33 +935,6 @@
                 answer.style.maxHeight = null;
                 icon.textContent = "+";
             }
-        }
-
-        // Filter Project Gallery
-        function filterGallery(category, btn) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Update active button state
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            // Filter cards with smooth opacity trans
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 50);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
         }
 
         // Dynamic Captcha setup
