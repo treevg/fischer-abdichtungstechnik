@@ -406,8 +406,8 @@
                     <!-- Card 1: Horizontalsperre Wohnhaus -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/Salzmann.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Horizontalsperre- Rissverpressung/Salzmann.jpeg" alt="Nachträgliche Horizontalsperre Wohnhaus" loading="lazy">
+                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/HorizontalsperreRissverpressung/Horizontalsperre01.jpeg')" style="cursor: pointer;">
+                                <img src="photos/HorizontalsperreRissverpressung/Horizontalsperre01.jpeg" alt="Nachträgliche Horizontalsperre Wohnhaus" loading="lazy">
                                 <span class="gallery-badge">Horizontalsperre</span>
                                 <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
@@ -422,8 +422,8 @@
                     <!-- Card 2: Rissverpressung Altbau -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg" alt="Mauerwerkssanierung Altbau" loading="lazy">
+                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/HorizontalsperreRissverpressung/Horizontalsperre02.jpeg')" style="cursor: pointer;">
+                                <img src="photos/HorizontalsperreRissverpressung/Horizontalsperre02.jpeg" alt="Mauerwerkssanierung Altbau" loading="lazy">
                                 <span class="gallery-badge">Rissverpressung</span>
                                 <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
@@ -438,8 +438,8 @@
                     <!-- Card 3: Horizontalsperre Mehrfamilienhaus -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg" alt="Injektionsverfahren Mehrfamilienhaus" loading="lazy">
+                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/HorizontalsperreRissverpressung/Horizontalsperre03.jpeg')" style="cursor: pointer;">
+                                <img src="photos/HorizontalsperreRissverpressung/Horizontalsperre03.jpeg" alt="Injektionsverfahren Mehrfamilienhaus" loading="lazy">
                                 <span class="gallery-badge">Horizontalsperre</span>
                                 <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
@@ -454,8 +454,8 @@
                     <!-- Card 4: Rissverpressung Altbau (Regnery) -->
                     <div class="gallery-item horizontalsperre">
                         <div class="gallery-card-inner">
-                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg')" style="cursor: pointer;">
-                                <img src="photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg" alt="Mauerwerks-Rissverpressung Altbau" loading="lazy">
+                            <div class="gallery-img-container" onclick="openFolderLightbox('horizontalsperre', 'photos/HorizontalsperreRissverpressung/Horizontalsperre04.jpeg')" style="cursor: pointer;">
+                                <img src="photos/HorizontalsperreRissverpressung/Horizontalsperre04.jpeg" alt="Mauerwerks-Rissverpressung Altbau" loading="lazy">
                                 <span class="gallery-badge">Rissverpressung</span>
                                 <div class="gallery-img-overlay"><span>🔍 Details öffnen</span></div>
                             </div>
@@ -725,10 +725,10 @@
         // Folder-based Galleries definition
         const folderGalleries = {
             'horizontalsperre': [
-                'photos/Horizontalsperre- Rissverpressung/Salzmann.jpeg',
-                'photos/Horizontalsperre- Rissverpressung/Bettina Lüning  Krefeld 04.07.2025.jpeg',
-                'photos/Horizontalsperre- Rissverpressung/P und Z Immobilien.jpeg',
-                'photos/Horizontalsperre- Rissverpressung/👍Regnery.jpeg'
+                'photos/HorizontalsperreRissverpressung/Horizontalsperre01.jpeg',
+                'photos/HorizontalsperreRissverpressung/Horizontalsperre02.jpeg',
+                'photos/HorizontalsperreRissverpressung/Horizontalsperre03.jpeg',
+                'photos/HorizontalsperreRissverpressung/Horizontalsperre04.jpeg'
             ]
         };
 
@@ -818,15 +818,15 @@
             const parts = imgSrc.split('/');
             const filename = parts[parts.length - 1];
             // Format nice title
-            let cleanTitle = filename.replace('.jpeg', '').replace('👍', '').replace('✉️', '').trim();
-            if (cleanTitle.includes('Lüning')) cleanTitle = 'Rissverpressung Altbau';
-            else if (cleanTitle.includes('Salzmann')) cleanTitle = 'Mauerwerks-Trockenlegung';
-            else if (cleanTitle.includes('Biehnr')) cleanTitle = 'Kellerinnenabdichtung';
-            else if (cleanTitle.includes('Seran')) cleanTitle = 'Kellerabdichtung';
-            else if (cleanTitle.includes('Lochmann')) cleanTitle = 'Meisterbedachung';
-            else if (cleanTitle.includes('Blumenhoven')) cleanTitle = 'Balkonsanierung & Belag';
-            else if (cleanTitle.includes('P und Z')) cleanTitle = 'Mehrfamilienhaus-Sanierung';
-            else if (cleanTitle.includes('Regnery')) cleanTitle = 'Rissverpressung Altbau';
+            let cleanTitle = filename.replace('.jpeg', '').replace('.heic', '').trim();
+            if (cleanTitle === 'Horizontalsperre01') cleanTitle = 'Mauerwerks-Trockenlegung';
+            else if (cleanTitle === 'Horizontalsperre02') cleanTitle = 'Rissverpressung Altbau';
+            else if (cleanTitle === 'Horizontalsperre03') cleanTitle = 'Mehrfamilienhaus-Sanierung';
+            else if (cleanTitle === 'Horizontalsperre04') cleanTitle = 'Rissverpressung Wohnhaus';
+            else if (cleanTitle.startsWith('Kellerabdichtung')) cleanTitle = 'Kellerinnenabdichtung';
+            else if (cleanTitle.startsWith('Balkonsanierung')) cleanTitle = 'Balkonsanierung & Belag';
+            else if (cleanTitle.startsWith('Bedachungen')) cleanTitle = 'Meisterbedachung';
+            else if (cleanTitle.startsWith('Treppensanierung')) cleanTitle = 'Treppensanierung';
             
             document.getElementById('lightbox-caption').textContent = cleanTitle;
             document.getElementById('lightbox-counter').textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
