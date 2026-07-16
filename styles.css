@@ -433,11 +433,11 @@ p {
 
 .visual-badge {
     position: absolute;
-    bottom: -1.5rem;
-    left: 1.5rem;
+    bottom: -2.5rem;
+    right: 1.5rem;
     background-color: var(--color-accent);
     color: var(--color-white);
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.3rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -1450,38 +1450,6 @@ p {
     display: block;
 }
 
-.hero-overlay-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-}
-
-@keyframes riseEffect {
-    to {
-        stroke-dashoffset: -20;
-    }
-}
-
-.rising-line-1, .rising-line-2, .rising-line-3, .rising-line-4 {
-    animation: riseEffect 1.5s linear infinite;
-}
-
-.rising-line-2 {
-    animation-delay: 0.3s;
-}
-
-.rising-line-3 {
-    animation-delay: 0.6s;
-}
-
-.rising-line-4 {
-    animation-delay: 0.9s;
-}
-
 
 
 .hero-overlay-badge {
@@ -1507,8 +1475,8 @@ p {
     background-color: rgba(254, 242, 242, 0.85);
     border: 1px solid rgba(254, 226, 226, 0.5);
     color: #991b1b;
-    top: 86%;
-    right: 8%;
+    top: 90%;
+    left: 8%;
 }
 
 .badge-moisture .badge-icon {
@@ -1519,8 +1487,8 @@ p {
     background-color: rgba(240, 253, 244, 0.85);
     border: 1px solid rgba(187, 247, 208, 0.5);
     color: #166534;
-    top: 54%;
-    right: 4%;
+    top: 60%;
+    left: 4%;
 }
 
 .badge-protection .badge-icon {
@@ -1531,7 +1499,7 @@ p {
     background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(226, 232, 240, 0.5);
     color: var(--color-primary);
-    top: 64%;
+    top: 75%;
     left: 4%;
 }
 
@@ -1539,23 +1507,58 @@ p {
     color: var(--color-accent);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero-overlay-badge {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         padding: 0.25rem 0.5rem;
     }
-    .badge-moisture {
-        top: 82%;
-        right: 4%;
-        left: auto;
-    }
     .badge-protection {
-        top: 48%;
-        right: 2%;
+        top: 58%;
+        left: 4%;
+        right: auto;
     }
     .badge-barrier {
-        top: 59%;
-        left: 2%;
+        top: 74%;
+        left: 4%;
         right: auto;
+    }
+    .badge-moisture {
+        top: 90%;
+        left: 6%;
+        right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-overlay-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+        gap: 0.25rem;
+    }
+    .badge-protection {
+        top: 56%;
+        left: 3%;
+        right: auto;
+    }
+    .badge-barrier {
+        top: 73%;
+        left: 3%;
+        right: auto;
+    }
+    .badge-moisture {
+        top: 90%;
+        left: 5%;
+        right: auto;
+    }
+    .visual-badge {
+        padding: 0.4rem 0.8rem;
+        bottom: -1.5rem;
+        right: 0.5rem;
+    }
+    .visual-badge .number {
+        font-size: 1.3rem;
+    }
+    .visual-badge .text {
+        font-size: 0.5rem;
     }
 }

@@ -94,20 +94,11 @@
                 </div>
                 <div class="hero-visual-content">
                     <div class="visual-wrapper">
-                        <img src="images/hero.png" alt="Fischer Injektions-Horizontalsperre" class="hero-img-main">
-                        
-                        <!-- Overlay SVG for Animated Indicating Lines -->
-                        <svg class="hero-overlay-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Animated Rising Lines (Centered, 4 columns, positioned extremely low) -->
-                            <g class="rising-lines">
-                                <path d="M 190,398 L 190,360" stroke="#0ea5e9" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 12" class="rising-line-1"/>
-                                <path d="M 230,398 L 230,350" stroke="#0ea5e9" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 12" class="rising-line-2"/>
-                                <path d="M 270,398 L 270,350" stroke="#0ea5e9" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 12" class="rising-line-3"/>
-                                <path d="M 310,398 L 310,365" stroke="#0ea5e9" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 12" class="rising-line-4"/>
-                            </g>
-                            
-
-                        </svg>
+                        <!-- Modern, self-hosted, lightweight video with a fallback WebP poster -->
+                        <video autoplay loop muted playsinline class="hero-img-main" poster="images/animation.webp">
+                            <source src="images/animation.webm" type="video/webm">
+                            <img src="images/animation.webp" alt="Fischer Injektions-Horizontalsperre" class="hero-img-main">
+                        </video>
 
                         <!-- Absolute HTML Text Box Overlays -->
                         <div class="hero-overlay-badge badge-moisture">
