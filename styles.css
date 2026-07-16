@@ -1529,27 +1529,13 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    /* Hide the text-overlay badges entirely on mobile screen sizes to keep the video layout clean */
     .hero-overlay-badge {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.4rem;
-        gap: 0.25rem;
+        display: none !important;
     }
-    .badge-protection {
-        top: 56%;
-        left: 3%;
-        right: auto;
-    }
-    .badge-barrier {
-        top: 73%;
-        left: 3%;
-        right: auto;
-    }
-    .badge-moisture {
-        top: 90%;
-        left: 5%;
-        right: auto;
-    }
+    
+    /* Scale down the 100% Erfolgsgarantie badge to fit nicely in the corner on mobile viewports */
     .visual-badge {
         padding: 0.4rem 0.8rem;
         bottom: -1.5rem;

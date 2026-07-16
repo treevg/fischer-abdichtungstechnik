@@ -926,6 +926,25 @@
             document.getElementById('leadForm').style.display = 'none';
             document.getElementById('form-success-message').style.display = 'block';
         }
+
+        // Performance Optimization: Pause hero video when out of viewport, play when in view
+        document.addEventListener("DOMContentLoaded", function () {
+            const heroVideo = document.querySelector(".hero-visual-content video");
+            if (heroVideo && "IntersectionObserver" in window) {
+                const observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            heroVideo.play().catch(function (err) {
+                                console.log("Video play was prevented:", err);
+                            });
+                        } else {
+                            heroVideo.pause();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(heroVideo);
+            }
+        });
     </script>
 </body>
 </html>
