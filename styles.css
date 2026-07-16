@@ -425,7 +425,7 @@ p {
     position: relative;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 991px) {
     .visual-wrapper {
         max-width: 75%;
         margin-left: auto;
@@ -1541,6 +1541,11 @@ p {
     /* Hide the text-overlay badges entirely on mobile screen sizes to keep the video layout clean */
     .hero-overlay-badge {
         display: none !important;
+    }
+
+    /* Restore full width for mobile screens to maximize video/image clarity */
+    .visual-wrapper {
+        max-width: 100%;
     }
     
     /* Scale down the 100% Erfolgsgarantie badge to fit nicely in the corner on mobile viewports */
