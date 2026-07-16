@@ -425,6 +425,14 @@ p {
     position: relative;
 }
 
+@media (min-width: 992px) {
+    .visual-wrapper {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .hero-svg {
     border-radius: 1rem;
     box-shadow: var(--shadow-lg);
