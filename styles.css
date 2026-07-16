@@ -1401,7 +1401,7 @@ p {
 }
 
 /* --- Responsive Menu Adjustments --- */
-@media (max-width: 991px) {
+@media (max-width: 1150px) {
     .main-nav {
         position: fixed;
         top: 80px; /* Below header */
