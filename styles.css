@@ -1429,13 +1429,13 @@ p {
 @media (max-width: 1150px) {
     .main-nav {
         position: fixed;
-        top: 80px; /* Below header */
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 100vh;
         background-color: var(--color-white);
         flex-direction: column;
-        padding: 3rem 1.5rem;
+        padding: 7rem 1.5rem 3rem 1.5rem; /* Large top padding to make links sit beautifully below the sticky header banner */
         gap: 2rem;
         box-shadow: var(--shadow-lg);
         transition: var(--transition);
