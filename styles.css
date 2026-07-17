@@ -237,18 +237,30 @@ p {
 
 /* --- Header & Navigation --- */
 .main-header {
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 0.75rem 0;
 }
 
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    pointer-events: none;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1001;
 }
 
 .logo {
