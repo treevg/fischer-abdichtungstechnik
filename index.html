@@ -944,6 +944,48 @@
                 }, { threshold: 0.1 });
                 observer.observe(heroVideo);
             }
+
+            // Staggered fade-in of hero badges once visual content enters viewport
+            const visualWrapper = document.querySelector(".visual-wrapper");
+            // Select both the left-side text overlay badges and the Erfolgsgarantie badge
+            const badges = document.querySelectorAll(".hero-overlay-badge, .visual-badge");
+            
+            if (visualWrapper && badges.length > 0 && "IntersectionObserver" in window) {
+                // Initialize badges to their start state (progressive enhancement)
+                badges.forEach(function (badge) {
+                    badge.classList.add("badge-prepare");
+                });
+
+                const badgeObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            // Fade in bottom-to-top with delay
+                            const moisture = document.querySelector(".badge-moisture");
+                            const barrier = document.querySelector(".badge-barrier");
+                            const protection = document.querySelector(".badge-protection");
+                            const guarantee = document.querySelector(".visual-badge");
+
+                            if (moisture) {
+                                setTimeout(function () { moisture.classList.add("badge-visible"); }, 400);
+                            }
+                            if (barrier) {
+                                setTimeout(function () { barrier.classList.add("badge-visible"); }, 1600);
+                            }
+                            if (protection) {
+                                setTimeout(function () { protection.classList.add("badge-visible"); }, 2800);
+                            }
+                            if (guarantee) {
+                                setTimeout(function () { guarantee.classList.add("badge-visible"); }, 4000);
+                            }
+
+                            // Unobserve once triggered to lock the animation in place
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 }); // Triggers when 50% of the video/wrapper is visible
+
+                badgeObserver.observe(visualWrapper);
+            }
         });
     </script>
 </body>

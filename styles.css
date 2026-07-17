@@ -451,7 +451,24 @@ p {
     flex-direction: column;
     align-items: center;
     box-shadow: var(--shadow-md);
+}
+
+/* Pulse animation only runs on load (no JS fallback) or once the fade-in is fully visible */
+.visual-badge:not(.badge-prepare),
+.visual-badge.badge-visible {
     animation: pulse 2s infinite;
+}
+
+/* Staggered fade-in styling for Success Badge */
+.visual-badge.badge-prepare {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.visual-badge.badge-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 @keyframes pulse {
@@ -1477,6 +1494,18 @@ p {
 .hero-overlay-badge:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Staggered fade-in animation on scroll entry */
+.hero-overlay-badge.badge-prepare {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hero-overlay-badge.badge-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .badge-moisture {
