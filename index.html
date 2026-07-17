@@ -100,23 +100,23 @@
                             <img src="images/animation.webp" alt="Fischer Injektions-Horizontalsperre" class="hero-img-main">
                         </video>
 
-                        <!-- Absolute HTML Text Box Overlays -->
-                        <div class="hero-overlay-badge badge-moisture">
+                        <!-- Absolute HTML Text Box Overlays (Initialize with badge-prepare to prevent layout flicker) -->
+                        <div class="hero-overlay-badge badge-moisture badge-prepare">
                             <span class="badge-icon">⚠️</span>
                             <span class="badge-text">Feuchtigkeit steigt auf</span>
                         </div>
 
-                        <div class="hero-overlay-badge badge-protection">
+                        <div class="hero-overlay-badge badge-protection badge-prepare">
                             <span class="badge-icon">✓</span>
                             <span class="badge-text">Dauerhaft trockene Wände</span>
                         </div>
 
-                        <div class="hero-overlay-badge badge-barrier">
+                        <div class="hero-overlay-badge badge-barrier badge-prepare">
                             <span class="badge-icon">🛡️</span>
                             <span class="badge-text">Injektions-Horizontalsperre</span>
                         </div>
 
-                        <div class="visual-badge">
+                        <div class="visual-badge badge-prepare">
                             <span class="number">100%</span>
                             <span class="text">Erfolgsgarantie</span>
                         </div>
@@ -947,15 +947,8 @@
 
             // Staggered fade-in of hero badges once visual content enters viewport
             const visualWrapper = document.querySelector(".visual-wrapper");
-            // Select both the left-side text overlay badges and the Erfolgsgarantie badge
-            const badges = document.querySelectorAll(".hero-overlay-badge, .visual-badge");
             
-            if (visualWrapper && badges.length > 0 && "IntersectionObserver" in window) {
-                // Initialize badges to their start state (progressive enhancement)
-                badges.forEach(function (badge) {
-                    badge.classList.add("badge-prepare");
-                });
-
+            if (visualWrapper && "IntersectionObserver" in window) {
                 const badgeObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
