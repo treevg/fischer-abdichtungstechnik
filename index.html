@@ -40,26 +40,10 @@
 
     <!-- Header & Navigation -->
     <header class="main-header">
-        <div class="header-background"></div>
         <div class="container header-container">
             <a href="#" class="logo">
                 <img src="images/logo_small.svg" alt="Fischer Dach • Wand • Abdichtungstechnik" class="header-logo-img">
             </a>
-            <nav class="main-nav">
-                <a href="#problem">Das Problem</a>
-                <a href="#loesung">Die Lösung</a>
-                <a href="#ablauf">4-Schritt-Ablauf</a>
-                <a href="#referenzen">Referenzen</a>
-                <a href="#faq">FAQ</a>
-                <a href="#kontakt" class="btn btn-primary nav-cta">Kostenfreie Analyse</a>
-                
-                <!-- Mobile-only Contact Section (shown when menu collapses) -->
-                <div class="nav-utility-mobile">
-                    <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße 74, 41747 Viersen</a></span>
-                    <span>📞 <a href="tel:+49216224716">02162 / 24 71 6</a></span>
-                    <span>✉️ <a href="mailto:info@fischer-abdichtungstechnik.de">info@fischer-abdichtungstechnik.de</a></span>
-                </div>
-            </nav>
             <button class="mobile-nav-toggle" aria-label="Menü öffnen" onclick="toggleMobileNav()">
                 <span></span>
                 <span></span>
@@ -67,6 +51,22 @@
             </button>
         </div>
     </header>
+
+    <nav class="main-nav">
+        <a href="#problem">Das Problem</a>
+        <a href="#loesung">Die Lösung</a>
+        <a href="#ablauf">4-Schritt-Ablauf</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt" class="btn btn-primary nav-cta">Kostenfreie Analyse</a>
+        
+        <!-- Mobile-only Contact Section (shown when menu collapses) -->
+        <div class="nav-utility-mobile">
+            <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße 74, 41747 Viersen</a></span>
+            <span>📞 <a href="tel:+49216224716">02162 / 24 71 6</a></span>
+            <span>✉️ <a href="mailto:info@fischer-abdichtungstechnik.de">info@fischer-abdichtungstechnik.de</a></span>
+        </div>
+    </nav>
 
     <main>
         <!-- Hero Section -->
@@ -981,7 +981,10 @@
                             observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.5 }); // Triggers when 50% of the video/wrapper is visible
+                }, {
+                    rootMargin: "-15% 0px -40% 0px", // Excludes bottom 40% of screen to force video higher up before triggering
+                    threshold: 0.2 // Triggers when 20% of the video enters this upper-middle band
+                });
 
                 badgeObserver.observe(visualWrapper);
             }
