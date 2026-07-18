@@ -332,6 +332,10 @@ p {
     color: var(--color-accent);
 }
 
+.nav-utility-mobile {
+    display: none;
+}
+
 .nav-cta {
     padding: 0.5rem 1.25rem;
     font-size: 0.9rem;
@@ -1439,6 +1443,10 @@ p {
 
 /* --- Responsive Menu Adjustments --- */
 @media (max-width: 1150px) {
+    .utility-bar {
+        display: none !important;
+    }
+
     .main-nav {
         position: fixed;
         top: 0;
@@ -1452,6 +1460,7 @@ p {
         box-shadow: var(--shadow-lg);
         transition: var(--transition);
         z-index: 999;
+        overflow-y: auto; /* Allow vertical scrolling on short/landscape mobile viewports */
     }
 
     .main-nav.nav-active {
@@ -1477,6 +1486,37 @@ p {
     .nav-cta {
         width: 100%;
         max-width: 300px;
+    }
+
+    .nav-utility-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        background-color: var(--color-dark-bg); /* Clean slate-dark color #0f172a */
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        margin-top: auto; /* Anchors it cleanly at the bottom of the slide-in menu */
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-utility-mobile span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #94a3b8; /* Muted silver text */
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .nav-utility-mobile a {
+        color: var(--color-white) !important;
+        transition: var(--transition);
+    }
+
+    .nav-utility-mobile a:hover {
+        color: var(--color-accent) !important;
     }
 }
 
