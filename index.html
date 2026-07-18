@@ -31,8 +31,8 @@
     <div class="utility-bar">
         <div class="container utility-content">
             <div class="utility-left">
-                <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße 74, 41747 Viersen</a></span>
-                <span>📞 <a href="tel:+49216224716">02162 / 24 71 6</a></span>
+                <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße&nbsp;74, 41747&nbsp;Viersen</a></span>
+                <span>📞 <a href="tel:+49216224716">+49 2162 24716</a></span>
                 <span>✉️ <a href="mailto:info@fischer-abdichtungstechnik.de">info@fischer-abdichtungstechnik.de</a></span>
             </div>
         </div>
@@ -44,6 +44,17 @@
             <a href="#" class="logo">
                 <img src="images/logo_small.svg" alt="Fischer Dach • Wand • Abdichtungstechnik" class="header-logo-img">
             </a>
+            
+            <!-- Desktop-only Navigation (horizontal flex) -->
+            <nav class="main-nav nav-desktop">
+                <a href="#problem">Das Problem</a>
+                <a href="#loesung">Die Lösung</a>
+                <a href="#ablauf">4-Schritt-Ablauf</a>
+                <a href="#referenzen">Referenzen</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontakt" class="btn btn-primary nav-cta">Kostenfreie Analyse</a>
+            </nav>
+
             <button class="mobile-nav-toggle" aria-label="Menü öffnen" onclick="toggleMobileNav()">
                 <span></span>
                 <span></span>
@@ -52,7 +63,8 @@
         </div>
     </header>
 
-    <nav class="main-nav">
+    <!-- Mobile-only Slide-out Drawer Navigation (vertical stacked sibling) -->
+    <nav class="main-nav nav-mobile">
         <a href="#problem">Das Problem</a>
         <a href="#loesung">Die Lösung</a>
         <a href="#ablauf">4-Schritt-Ablauf</a>
@@ -60,10 +72,10 @@
         <a href="#faq">FAQ</a>
         <a href="#kontakt" class="btn btn-primary nav-cta">Kostenfreie Analyse</a>
         
-        <!-- Mobile-only Contact Section (shown when menu collapses) -->
+        <!-- Mobile-only Contact Section (shown inside dark box) -->
         <div class="nav-utility-mobile">
-            <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße 74, 41747 Viersen</a></span>
-            <span>📞 <a href="tel:+49216224716">02162 / 24 71 6</a></span>
+            <span>📍 <a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer">Rektoratstraße&nbsp;74, 41747&nbsp;Viersen</a></span>
+            <span>📞 <a href="tel:+49216224716">+49 2162 24716</a></span>
             <span>✉️ <a href="mailto:info@fischer-abdichtungstechnik.de">info@fischer-abdichtungstechnik.de</a></span>
         </div>
     </nav>
@@ -94,7 +106,7 @@
 
                     <div class="hero-cta-group">
                         <a href="#kontakt" class="btn btn-accent btn-large">Jetzt freie Termine anfragen!</a>
-                        <a href="tel:+49216224716" class="btn btn-secondary btn-large">📞 02162 / 24 71 6</a>
+                        <a href="tel:+49216224716" class="btn btn-secondary btn-large">📞 +49 2162 24716</a>
                     </div>
                 </div>
                 <div class="hero-visual-content">
@@ -521,21 +533,21 @@
                             <span class="icon">📍</span>
                             <div>
                                 <strong>Adresse:</strong>
-                                <p><a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer" class="contact-link" style="text-decoration: underline; font-weight: 500;">Fischer Dach • Wand • Abdichtungstechnik GmbH<br>Rektoratstraße 74, 41747 Viersen</a></p>
+                                <p class="address-text"><a href="https://maps.google.com/?q=Fischer+Dach+Wand+Abdichtungstechnik+GmbH+Rektoratstrasse+74+41747+Viersen" target="_blank" rel="noopener noreferrer" class="contact-link" style="text-decoration: underline; font-weight: 500;">Fischer Dach • Wand • Abdichtungstechnik GmbH<br>Rektoratstraße&nbsp;74, 41747&nbsp;Viersen</a></p>
                             </div>
                         </div>
                         <div class="contact-detail-item">
                             <span class="icon">📞</span>
                             <div>
                                 <strong>Telefonnummer:</strong>
-                                <p><a href="tel:+49216224716" class="contact-link">02162 / 24 71 6</a></p>
+                                <p class="address-text"><a href="tel:+49216224716" class="contact-link">+49 2162 24716</a></p>
                             </div>
                         </div>
                         <div class="contact-detail-item">
                             <span class="icon">✉️</span>
                             <div>
                                 <strong>E-Mail:</strong>
-                                <p><a href="mailto:info@fischer-abdichtungstechnik.de" class="contact-link">info@fischer-abdichtungstechnik.de</a></p>
+                                <p class="address-text"><a href="mailto:info@fischer-abdichtungstechnik.de" class="contact-link">info@fischer-abdichtungstechnik.de</a></p>
                             </div>
                         </div>
                         <div class="contact-detail-item">
@@ -544,7 +556,7 @@
                             </span>
                             <div>
                                 <strong>WhatsApp Chat:</strong>
-                                <p><a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20ein%20Feuchtigkeitsproblem%20und%20interessiere%20mich%20f%C3%BCr%20die%20kostenlose%20Schadenanalyse." class="contact-link" onclick="handleWhatsAppClick(event, 'Hallo Fischer-Team, ich habe ein Feuchtigkeitsproblem und interessiere mich für die kostenlose Schadenanalyse.')" target="_blank" rel="noopener noreferrer">02162 / 24 71 6 (Hier klicken)</a></p>
+                                <p class="address-text"><a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20ein%20Feuchtigkeitsproblem%20und%20interessiere%20mich%20f%C3%BCr%20die%20kostenlose%20Schadenanalyse." class="contact-link" onclick="handleWhatsAppClick(event, 'Hallo Fischer-Team, ich habe ein Feuchtigkeitsproblem und interessiere mich für die kostenlose Schadenanalyse.')" target="_blank" rel="noopener noreferrer">+49 2162 24716 (Hier klicken)</a></p>
                             </div>
                         </div>
                     </div>
@@ -552,8 +564,8 @@
                     <div class="whatsapp-cta-card mt-4">
                         <strong>📸 Schadensbilder senden:</strong>
                         <p class="mt-2">Senden Sie uns ganz einfach Fotos Ihrer feuchten Kellerwand direkt per WhatsApp. Wir geben Ihnen eine kostenlose, unverbindliche Ersteinschätzung!</p>
-                        <a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20Fotos%20meines%20Feuchtigkeitsproblems%20f%C3%BCr%20eine%20Ersteinsch%C3%A4tzung." class="btn btn-secondary mt-2" onclick="handleWhatsAppClick(event, 'Hallo Fischer-Team, ich habe Fotos meines Feuchtigkeitsproblems für eine Ersteinschätzung.')" target="_blank" rel="noopener noreferrer" style="border-color: #25d366; color: #128c7e; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: bold;">
-                            <img src="images/icons8-whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle;"> Jetzt Fotos per WhatsApp senden
+                        <a href="https://wa.me/49216224716?text=Hallo%20Fischer-Team%2C%20ich%20habe%20Fotos%20meines%20Feuchtigkeitsproblems%20f%C3%BCr%20eine%20Ersteinsch%C3%A4tzung." class="btn btn-secondary mt-2" onclick="handleWhatsAppClick(event, 'Hallo Fischer-Team, ich habe Fotos meines Feuchtigkeitsproblems für eine Ersteinschätzung.')" target="_blank" rel="noopener noreferrer" style="border-color: #25d366; color: #128c7e; font-weight: bold;">
+                            Jetzt Fotos per WhatsApp senden
                         </a>
                     </div>
 
@@ -689,7 +701,7 @@
             </div>
             
             <!-- Number & Links fallback -->
-            <p style="color: var(--color-primary); font-weight: 600; font-size: 1.15rem; margin-bottom: 0.25rem;">02162 / 24 71 6</p>
+            <p style="color: var(--color-primary); font-weight: 600; font-size: 1.15rem; margin-bottom: 0.25rem;">+49 2162 24716</p>
             <span style="color: var(--color-secondary); font-size: 0.85rem; display: block; margin-bottom: 1.5rem;">Erreichbar Werktags 08:00 - 18:00 Uhr</span>
             
             <div style="display: flex; flex-direction: column; gap: 0.75rem;">
@@ -830,7 +842,7 @@
 
         // Toggle Mobile Navigation Menu
         function toggleMobileNav() {
-            const nav = document.querySelector('.main-nav');
+            const nav = document.querySelector('.nav-mobile');
             const toggle = document.querySelector('.mobile-nav-toggle');
             nav.classList.toggle('nav-active');
             toggle.classList.toggle('toggle-active');
@@ -990,8 +1002,8 @@
             }
 
             // Close mobile navigation menu when any link inside it is clicked
-            const navLinks = document.querySelectorAll(".main-nav a");
-            const nav = document.querySelector(".main-nav");
+            const navLinks = document.querySelectorAll(".nav-mobile a");
+            const nav = document.querySelector(".nav-mobile");
             const toggle = document.querySelector(".mobile-nav-toggle");
             
             if (nav && toggle && navLinks.length > 0) {
