@@ -442,6 +442,51 @@ p {
 }
 
 @media (max-width: 991px) {
+    .hero-section {
+        padding: 1.5rem 0 3rem 0; /* Tightened top padding under sticky header */
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem; /* Smaller headline for mobile/collapsed viewports */
+        margin-bottom: 1.5rem;
+        order: 2;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Spacing handled cleanly via margins of ordered items */
+    }
+
+    .hero-text-content {
+        display: contents; /* Direct children become flex items, enabling reordering */
+    }
+
+    .hero-tagline {
+        order: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-lead {
+        order: 3;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem; /* Slightly smaller for mobile reading */
+    }
+
+    .hero-visual-content {
+        order: 4;
+        margin-bottom: 2rem; /* Vertical space below the video */
+    }
+
+    .hero-benefits {
+        order: 5;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-cta-group {
+        order: 6;
+    }
+
     .visual-wrapper {
         max-width: 85%;
         margin-left: auto;
@@ -457,8 +502,8 @@ p {
 
 .visual-badge {
     position: absolute;
-    bottom: -2.5rem;
-    right: 1.5rem;
+    top: 85%;
+    right: 8%;
     background-color: var(--color-accent);
     color: var(--color-white);
     padding: 0.8rem 1.3rem;
@@ -1646,11 +1691,11 @@ p {
         right: auto;
     }
     
-    /* Scale down the 100% Erfolgsgarantie badge to fit nicely in the corner on mobile viewports */
+    /* Scale down and align the 100% Erfolgsgarantie badge to match the height of the moisture badge on mobile viewports */
     .visual-badge {
         padding: 0.4rem 0.8rem;
-        bottom: -1.5rem;
-        right: 0.5rem;
+        top: 85%;
+        right: 5%;
         z-index: 25;
     }
     .visual-badge .number {
