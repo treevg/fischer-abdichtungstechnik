@@ -1230,6 +1230,42 @@ p {
     transform: scale(1.1);
 }
 
+/* Custom WhatsApp Modal styling to prevent gallery lightbox content conflicts */
+.whatsapp-modal-box {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 440px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    box-sizing: border-box;
+    animation: zoom 0.3s ease;
+    position: relative;
+    z-index: 2001;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-modal-box {
+        padding: 1.5rem 1.25rem; /* Tighter padding on extra small screens to prevent overflow */
+    }
+    
+    .whatsapp-modal-box h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .whatsapp-modal-box .qr-container {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .whatsapp-modal-box .qr-container img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
 .lightbox-prev,
 .lightbox-next {
     position: absolute;
