@@ -698,14 +698,12 @@ p {
     width: 100%;
     height: auto;
     border-radius: 0.75rem; /* Clean rounded corners for premium editorial look */
-    box-shadow: var(--shadow-md); /* Elegant shadow to make the photo pop beautifully */
     display: block;
     transition: var(--transition);
 }
 
 .solution-img:hover {
     transform: scale(1.015); /* Smooth subtle scale on hover */
-    box-shadow: var(--shadow-lg); /* Elevated shadow on hover */
 }
 
 @media (max-width: 991px) {
