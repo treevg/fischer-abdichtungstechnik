@@ -684,6 +684,10 @@ p {
 }
 
 /* --- Solution Section --- */
+.solution-header {
+    margin-bottom: 3rem; /* Elegant, premium vertical space below full-width text */
+}
+
 .solution-visual {
     width: 100%;
     max-width: 500px;
@@ -695,45 +699,9 @@ p {
     /* No borders, backgrounds, or shadows - clean flat floating graphic */
 }
 
-/* Desktop layout using CSS Grid Areas */
-@media (min-width: 992px) {
-    .solution-section .grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-            "visual header"
-            "visual benefits";
-        gap: 2.5rem;
-        align-items: start;
-    }
-    
-    .solution-visual {
-        grid-area: visual;
-        align-self: center; /* Beautifully vertically center the floating graphic in its column */
-    }
-    
-    .solution-header {
-        grid-area: header;
-    }
-    
-    .benefits-list {
-        grid-area: benefits;
-    }
-}
-
-/* Mobile/Tablet stacked vertical flow spacing */
 @media (max-width: 991px) {
-    .solution-section .grid-2 {
-        display: block; /* Native vertical block flow */
-    }
-    
-    .solution-header {
-        margin-bottom: 2rem;
-    }
-    
     .solution-visual {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.5rem; /* Soft separation spacing on stacked mobile layouts */
     }
 }
 
