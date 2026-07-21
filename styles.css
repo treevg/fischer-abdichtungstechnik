@@ -684,10 +684,31 @@ p {
 }
 
 /* --- Solution Section --- */
+.solution-visual {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .solution-svg {
     width: 100%;
     box-shadow: var(--shadow-lg);
     border-radius: 0.75rem;
+}
+
+@media (max-width: 991px) {
+    .solution-section .grid-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .solution-text {
+        order: 1; /* Long text on top */
+    }
+    
+    .solution-visual {
+        order: 2; /* Graphic right below the text */
+    }
 }
 
 .benefits-list {
