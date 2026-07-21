@@ -636,43 +636,20 @@ p {
     align-items: center;
 }
 
-/* --- USPs Sektion --- */
-.usps-section {
-    background-color: var(--color-primary);
-    padding: 3rem 0;
-    color: var(--color-white);
-}
-
-.usp-card {
-    background-color: rgba(255,255,255,0.05);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: var(--transition);
-}
-
-.usp-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255,255,255,0.08);
-}
-
-.usp-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.usp-card h3 {
-    color: var(--color-white);
-    margin-bottom: 0.5rem;
-}
-
-.usp-card p {
-    color: #cbd5e1;
-    margin-bottom: 0;
-    font-size: 0.95rem;
-}
-
 /* --- Problem Section --- */
+.problem-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.problem-section h2 {
+    color: var(--color-white);
+}
+
+.problem-section .section-lead {
+    color: #cbd5e1; /* Soft light gray for excellent contrast on dark blue */
+}
+
 .problem-card {
     background-color: var(--color-white);
     border-radius: 0.5rem;
