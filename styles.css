@@ -692,22 +692,48 @@ p {
 
 .solution-svg {
     width: 100%;
-    box-shadow: var(--shadow-lg);
-    border-radius: 0.75rem;
+    /* No borders, backgrounds, or shadows - clean flat floating graphic */
 }
 
-@media (max-width: 991px) {
+/* Desktop layout using CSS Grid Areas */
+@media (min-width: 992px) {
     .solution-section .grid-2 {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .solution-text {
-        order: 1; /* Long text on top */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "visual header"
+            "visual benefits";
+        gap: 2.5rem;
+        align-items: start;
     }
     
     .solution-visual {
-        order: 2; /* Graphic right below the text */
+        grid-area: visual;
+        align-self: center; /* Beautifully vertically center the floating graphic in its column */
+    }
+    
+    .solution-header {
+        grid-area: header;
+    }
+    
+    .benefits-list {
+        grid-area: benefits;
+    }
+}
+
+/* Mobile/Tablet stacked vertical flow spacing */
+@media (max-width: 991px) {
+    .solution-section .grid-2 {
+        display: block; /* Native vertical block flow */
+    }
+    
+    .solution-header {
+        margin-bottom: 2rem;
+    }
+    
+    .solution-visual {
+        margin-bottom: 2.5rem;
     }
 }
 
