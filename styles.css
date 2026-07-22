@@ -796,7 +796,7 @@ p {
 /* Mobile/Tablet stacked vertical flow spacing */
 @media (max-width: 991px) {
     .solution-visual {
-        margin-bottom: 1.5rem; /* Shrunk spacing below the image on mobile */
+        margin-bottom: 0.5rem; /* Shrunk spacing below the image on mobile */
     }
 
     .solution-benefits-container {
