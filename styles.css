@@ -684,8 +684,12 @@ p {
 }
 
 /* --- Solution Section --- */
+.solution-section {
+    padding: 3.5rem 0; /* Snug, premium section paddings to reduce empty whitespace */
+}
+
 .solution-header {
-    margin-bottom: 3rem; /* Elegant, premium vertical space below full-width text */
+    margin-bottom: 1.5rem; /* Shrunk vertical space below text */
 }
 
 .solution-bleed-grid {
@@ -740,7 +744,7 @@ p {
 /* Mobile/Tablet stacked vertical flow spacing */
 @media (max-width: 991px) {
     .solution-visual {
-        margin-bottom: 2.5rem; /* Soft separation spacing on stacked mobile layouts */
+        margin-bottom: 1.5rem; /* Shrunk spacing below the image on mobile */
     }
 
     .solution-benefits-container {
