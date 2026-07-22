@@ -756,7 +756,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .benefit-item {
