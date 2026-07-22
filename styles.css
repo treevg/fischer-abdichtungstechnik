@@ -688,27 +688,63 @@ p {
     margin-bottom: 3rem; /* Elegant, premium vertical space below full-width text */
 }
 
+.solution-bleed-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
 .solution-visual {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
 }
 
 .solution-img {
     width: 100%;
     height: auto;
-    border-radius: 0.75rem; /* Clean rounded corners for premium editorial look */
     display: block;
+    border-radius: 0; /* Flat edge on mobile edge-to-edge bleed */
     transition: var(--transition);
 }
 
 .solution-img:hover {
-    transform: scale(1.015); /* Smooth subtle scale on hover */
+    transform: scale(1.01); /* Subtle premium hover scaling */
 }
 
+/* Desktop Full Bleed Layout */
+@media (min-width: 992px) {
+    .solution-bleed-grid {
+        grid-template-columns: 1.25fr 1fr; /* Image is slightly wider */
+        align-items: center;
+        gap: 4rem; /* Generous spacing between columns */
+    }
+
+    .solution-img {
+        border-radius: 0 1rem 1rem 0; /* Exquisite detail: round only the right corners that stick inside the page */
+    }
+
+    .solution-benefits-container {
+        /* This brilliant calculation perfectly aligns the right column elements with the standard centered container! */
+        padding-right: calc((100vw - var(--container-width)) / 2 + 1.5rem);
+    }
+}
+
+/* Graceful fallbacks for standard containers */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .solution-benefits-container {
+        padding-right: 1.5rem;
+    }
+}
+
+/* Mobile/Tablet stacked vertical flow spacing */
 @media (max-width: 991px) {
     .solution-visual {
         margin-bottom: 2.5rem; /* Soft separation spacing on stacked mobile layouts */
+    }
+
+    .solution-benefits-container {
+        padding: 0 1.5rem; /* Ensure standard padding for readable benefit card decks on mobile */
     }
 }
 
