@@ -218,6 +218,7 @@
             <div class="solution-bleed-grid">
                 <div class="solution-visual">
                     <img src="images/nozzle_wall.png" alt="Fischer Bohrlochinjektion" class="solution-img" loading="lazy">
+                    <div class="rising-drops-container" aria-hidden="true"></div>
                 </div>
 
                 <div class="solution-benefits-container">
@@ -780,6 +781,38 @@
             }
         }
 
+        // Initialize rising water drop animation overlay on the solution graphic
+        function initRisingDrops() {
+            const container = document.querySelector('.rising-drops-container');
+            if (!container) return;
+
+            const numColumns = 6;
+            const duration = 15;
+            const spacing = 3.75;
+            const dropsPerColumn = Math.ceil(duration / spacing);
+
+            for (let col = 0; col < numColumns; col++) {
+                const leftPos = (col + 0.5) * (100 / numColumns);
+                
+                for (let d = 0; d < dropsPerColumn; d++) {
+                    const colOffset = (col % 2 === 1) ? (spacing / 2) : 0;
+                    const delay = -(d * spacing + colOffset);
+
+                    const drop = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    drop.setAttribute('class', 'rising-drop');
+                    drop.setAttribute('viewBox', '0 0 24 24');
+                    drop.style.left = `${leftPos}%`;
+                    drop.style.animationDelay = `${delay}s`;
+                    drop.style.animationDuration = `${duration}s`;
+
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    path.setAttribute('d', 'M12 2.69C12 2.69 4 11 4 15A8 8 0 0 0 12 23A8 8 0 0 0 20 15C20 11 12 2.69 12 2.69Z');
+                    drop.appendChild(path);
+                    container.appendChild(drop);
+                }
+            }
+        }
+
         // Dynamic Captcha setup
         let captchaVal1 = 0;
         let captchaVal2 = 0;
@@ -792,9 +825,10 @@
             document.getElementById('captcha-question').textContent = `${captchaVal1} + ${captchaVal2}`;
         }
 
-        // Initialize captcha on load
+        // Initialize captcha and animations on load
         window.addEventListener('DOMContentLoaded', () => {
             generateCaptcha();
+            initRisingDrops();
         });
 
         // Form Submit Handler
