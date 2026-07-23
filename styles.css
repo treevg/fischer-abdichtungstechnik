@@ -705,6 +705,11 @@ p {
     margin: 0;
 }
 
+.solution-inner {
+    position: relative;
+    width: 100%;
+}
+
 /* Rising Drops Pattern Overlay */
 .rising-drops-container {
     position: absolute;
@@ -714,7 +719,7 @@ p {
     height: 55.664%; /* height = 570 / 1024 */
     pointer-events: none;
     z-index: 2;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .rising-drop {
@@ -797,6 +802,16 @@ p {
 @media (max-width: 991px) {
     .solution-visual {
         margin-bottom: 0; /* Shrunk spacing below the image on mobile */
+        overflow: hidden; /* Prevent zoomed elements from spilling out */
+    }
+
+    .solution-inner {
+        width: 125%;
+        transform: translateX(-3%);
+    }
+
+    .solution-img:hover {
+        transform: none; /* Prevent desktop hover scaling on mobile/tablet */
     }
 
     .solution-benefits-container {
